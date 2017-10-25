@@ -1,0 +1,17 @@
+<h1>Tous les gossips</h1>
+
+<table>
+  <tr>
+    <th>Bloumy</th>
+    <th>Gossip</th>
+  </tr>
+ 
+  <% @gossip.each do |each| %>
+    <tr>
+      <td><%= each.anonymous_author %></td>
+      <td><%= each.content %></td> 
+      <td><%= link_to 'Show', gossip_path(each.id)%><br/><%= link_to 'Edit', edit_gossip_path(each.id)%><br/><%= link_to 'Delete', each, method: :delete, data: { confirm: "Are you sure?"}%></td>
+      </tr>
+  <% end %>
+  <%= link_to 'New Gossip', new_gossip_path%>
+</table>

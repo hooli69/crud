@@ -1,0 +1,15 @@
+<h2>New Gossip ? </h2>
+
+<table>
+	<tr>
+		<th>Author</th>
+		<th>Content</th>
+	</tr>
+	<tr>
+		<td><%= @gossip.anonymous_author %>
+		</td>
+		<td><%= @gossip.content%></td>
+	</tr>
+<%= link_to 'Revenir au BROAHGossip', gossips_path%>
+
+</table>
